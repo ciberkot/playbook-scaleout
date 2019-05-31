@@ -1,0 +1,41 @@
+[all:vars]
+a10_username=admin
+a10_password=a10
+a10_port=443
+a10_protocol=https
+
+[cgn-1:vars]
+NAT1_POOL_NAME= "POOL1"
+NAT1_START_ADDRESS= "100.100.200.4"
+NAT1_END_ADDRESS= "100.100.200.5"
+NAT1_POOL__MASK= "/24"
+HOSTNAME = "CGN-1"
+
+[cgn-2:vars]
+NAT1_POOL_NAME= "POOL1"
+NAT1_START_ADDRESS= "100.100.200.6"
+NAT1_END_ADDRESS= "100.100.200.7"
+NAT1_POOL__MASK= "/24"
+HOSTNAME = "CGN-2"
+
+[adc-1]
+172.31.31.163
+
+[adc-vf-1]
+172.31.31.199
+
+[cgn-1]
+172.31.31.199
+
+[cgn-2]
+172.31.31.132
+
+[scaleout]
+172.31.31.43 a10scaleout_id=3 a10_host=172.31.31.43
+172.31.31.199 a10scaleout_id=2 a10_host=172.31.31.199
+
+[CGN4]
+172.31.31.100 ansible_user=admin
+[WEB]
+172.31.31.67 ansible_user=ubuntu
+

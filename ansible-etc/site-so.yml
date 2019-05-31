@@ -1,0 +1,5 @@
+---
+- hosts: 
+     - scaleout
+  roles:
+     - a10_scaleout

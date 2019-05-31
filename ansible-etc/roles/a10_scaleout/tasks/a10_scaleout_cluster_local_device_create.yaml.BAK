@@ -1,0 +1,12 @@
+---
+- name: Create a10_scaleout_cluster_local_device instance
+  loop: "{{ query('inventory_hostnames', 'scaleout') }}"
+  loop_control:
+    index_var: my_idx
+  a10_scaleout_cluster_local_device:
+    a10_host: "{{ item }}"
+    a10_username: "{{ a10_username }}"
+    a10_password: "{{ a10_password }}"
+    priority: "{{ my_idx+1 }}"
+    id: "{{ my_idx+1 }}"
+    cluster_id: 1

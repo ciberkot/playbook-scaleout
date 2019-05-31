@@ -1,0 +1,17 @@
+---
+#  loop: "{{ query('inventory_hostnames', 'scaleout') }}"
+#  loop_control:
+#    index_var: my_idx
+#      device_id: "{{ groups['scaleout'].index(inventory_hostname) + 1 }}"
+#      ip: "{{ inventory_hostname }}"
+- name: Create a10_scaleout_cluster_cluster_devices_device_id example playbook
+  loop: "{{ query('inventory_hostnames', 'scaleout') }}"
+  loop_control:
+    index_var: my_idx
+  a10_scaleout_cluster_cluster_devices_device_id:
+      a10_host: "{{ inventory_hostname }}"
+      a10_username: "{{ a10_username }}"
+      a10_password: "{{ a10_password }}"
+      device_id: "{{my_idx+1}}"
+      ip: "{{ groups['scaleout'][my_idx] }}"
+      cluster_id: 1

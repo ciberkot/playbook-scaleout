@@ -1,0 +1,3 @@
+{% for host in groups['scaleout'] %}
+ips= {{ hostvars[host] }}
+{% endfor %}
