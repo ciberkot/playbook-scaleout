@@ -1,9 +1,0 @@
----
-- debug: msg="Create a10_scaleout_cgn example playbook"
-- name: Create a10_scaleout_cgn example playbook
-  a10_scaleout_cgn:
-      a10_host: "{{ inventory_hostname }}"
-      a10_username: "{{ a10_username }}"
-      a10_password: "{{ a10_password }}"
-      enable: 1
-
