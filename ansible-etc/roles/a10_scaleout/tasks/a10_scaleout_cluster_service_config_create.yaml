@@ -1,10 +1,10 @@
-
+---
 - name: Create a10_scaleout_cluster_service_config example playbook
-  connection: local
-  hosts: localhost
-  tasks:
-  - name: Create a10_scaleout_cluster_service_config instance
-    a10_scaleout_cluster_service_config:
-      a10_host: "{{ a10_host }}"
+  a10_scaleout_cluster_service_config:
+      a10_host: "{{ inventory_hostname }}"
       a10_username: "{{ a10_username }}"
       a10_password: "{{ a10_password }}"
+      cluster_id: 1
+      template_list:
+      - name: "TMPL1"
+      - device_group: 2
