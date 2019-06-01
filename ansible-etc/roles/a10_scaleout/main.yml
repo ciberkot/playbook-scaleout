@@ -1,0 +1,14 @@
+---
+- import_tasks: a10_scaleout_cluster_create.yaml
+- import_tasks: a10_scaleout_cluster_local_device_create.yaml
+- import_tasks: a10_scaleout_cluster_cluster_devices_create.yaml
+- import_tasks: a10_scaleout_cluster_cluster_devices_device_id_create.yaml
+- import_tasks: a10_scaleout_cgn_create.yaml
+- import_tasks: a10_scaleout_cluster_local_device_l2_redirect_create.yaml
+- import_tasks: a10_scaleout_cluster_device_groups_create.yaml
+- import_tasks: a10_scaleout_cluster_device_groups_device_group_create.yaml
+- import_tasks: a10_scaleout_cluster_service_config_create.yaml
+- import_tasks: a10_scaleout_cluster_service_config_template_create.yaml
+#- import_tasks: a10_scaleout_fixed_nat_create.yaml
+#- import_tasks: a10_scaleout_status_create.yaml
+#- import_tasks: a10_scaleout_traffic_map_create.yaml

@@ -1,0 +1,12 @@
+---
+- name: Create a10_scaleout_cluster_cluster_devices example playbook
+  a10_scaleout_cluster_cluster_devices:
+      a10_host: "{{ inventory_hostname }}"
+      a10_username: "{{ a10_username }}"
+      a10_password: "{{ a10_password }}"
+      cluster_id: 1
+      device_id_list:
+        - device_id: 7
+        - ip: 3.4.5.7
+        - device_id: 6
+        - ip: 3.4.5.6
